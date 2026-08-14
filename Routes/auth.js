@@ -47,8 +47,8 @@ router.post('/login', async (req, res) => {
     password
   });
 
-  if (error) return res.status(401).json({
-    error: 'Email ykn jecha-darbii dogoggoraa dha'
+ if (error) return res.status(401).json({
+    error: error.message
   });
 
   res.json({
